@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff4e8">
+<title>¡Feliz cumpleaños, Zankita!</title>
+<style>
+:root{--cream:#fff8ef;--pink:#f7d9d5;--brown:#765849;--gold:#f2c66d;--ink:#5e493f}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at 15% 12%,#fff 0 2px,transparent 3px),radial-gradient(circle at 85% 25%,#fff 0 2px,transparent 3px),linear-gradient(145deg,#fff9f1,#fce8e2 55%,#fff5d9);background-size:70px 70px,95px 95px,auto;overflow-x:hidden}
+main{width:min(760px,92vw);margin:0 auto;padding:30px 0 50px;text-align:center}
+.tag{letter-spacing:.16em;text-transform:uppercase;font:12px Arial,sans-serif;color:#a47c68}
+h1{font-size:clamp(2.3rem,8vw,4rem);line-height:1.05;margin:12px 0;color:#8c6252}
+.subtitle{font:15px Arial,sans-serif;color:#9a7b6d}
+.scene{position:relative;margin:25px auto 20px;max-width:560px;min-height:220px;border-radius:28px;background:linear-gradient(#fffaf4,#fce7df);box-shadow:0 12px 35px #a8795c1c;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.moon{position:absolute;right:12%;top:22px;width:55px;height:55px;border-radius:50%;background:#ffe7a6;box-shadow:0 0 0 10px #ffe7a633}
+.cloud{position:absolute;color:#fff;font-size:35px;opacity:.85}
+.cloud.one{left:8%;top:35px}.cloud.two{right:9%;bottom:32px}
+.friends{position:relative;display:flex;align-items:flex-end;gap:4px;z-index:1}
+.dog{font-size:clamp(6rem,22vw,9rem);filter:drop-shadow(0 7px 2px #9a6f5220);animation:bob 3s ease-in-out infinite}
+.bird{font-size:clamp(3.2rem,12vw,5rem);margin:0 0 17px;animation:bob 2.4s ease-in-out infinite reverse}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.speech{position:absolute;left:50%;top:16px;transform:translateX(-50%);background:white;border-radius:18px;padding:8px 14px;font:13px Arial,sans-serif;box-shadow:0 4px 14px #805d4c20;white-space:nowrap}
+.card{background:#fffdf9eF;border:1px solid #f2ddd1;border-radius:25px;padding:24px clamp(18px,5vw,38px);box-shadow:0 14px 38px #9d6d5420;text-align:left}
+.card h2{text-align:center;color:#986d5a;font-size:1.7rem;margin:0 0 14px}
+.card p{font-size:1.08rem;line-height:1.75;margin:0 0 14px}
+.card .sign{text-align:center;color:#9a6d5d;font-weight:bold;margin:20px 0 0}
+button{border:0;border-radius:999px;background:#b77e70;color:white;padding:14px 23px;font: bold 15px Arial,sans-serif;cursor:pointer;box-shadow:0 6px 16px #9b6a5a35;transition:transform .2s,background .2s}
+button:hover{transform:translateY(-2px);background:#a96f63}
+.controls{margin:20px 0 0}
+.hidden{display:none}
+.note{font:12px Arial,sans-serif;color:#a18476;margin-top:20px}
+.heart{position:fixed;bottom:-30px;pointer-events:none;animation:float 5s linear forwards;z-index:5}
+@keyframes float{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+.confetti{position:fixed;top:-15px;z-index:8;pointer-events:none;animation:fall 3.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(650deg);opacity:.2}}
+footer{margin-top:24px;color:#a18476;font:12px Arial,sans-serif}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main>
+  <div class="tag">una pequeña sorpresa para ti</div>
+  <h1>¡Feliz cumpleaños,<br>Zankita! 🎂</h1>
+  <div class="subtitle">Un día especial merece un detalle especial 🤍</div>
+
+  <section class="scene" aria-label="Snoopy y Woodstock celebrando">
+    <div class="moon"></div><div class="cloud one">☁️</div><div class="cloud two">☁️</div>
+    <div class="speech">¡Hoy se celebra! ✨</div>
+    <div class="friends"><div class="dog" aria-label="Snoopy">🐶</div><div class="bird" aria-label="Woodstock">🐤</div></div>
+  </section>
+
+  <div class="controls" id="openArea">
+    <button id="openBtn">🎁 Abrir tu sorpresa</button>
+  </div>
+
+  <article class="card hidden" id="letter">
+    <h2>Unas palabras para ti 🤍</h2>
+    <p>Espero que la pases muy bien el día de hoy y que disfrutes muchísimo tu cumpleaños. También quería aprovechar esta ocasión para darte las gracias por todas las experiencias, los momentos y los recuerdos que compartimos a lo largo de estos últimos tres años. Son momentos que, de una manera u otra, se quedarán conmigo y que siempre recordaré con muchísimo cariño.</p>
+    <p>Te deseo lo mejor en todo lo que está por venir. Espero que esta nueva etapa en la universidad esté llena de oportunidades, experiencias increíbles y muchos éxitos. Muchísima suerte en tus estudios y que nunca te falte esa suerte de pasar raspando, pero pasar, JAJAJA.</p>
+    <p>Aunque ya no tengamos que pasarnos las tareas, copiarnos y no prestar atención en clases como antes, quiero que sepas que son recuerdos que siempre llevaré conmigo. Al final, son esas pequeñas cosas las que hacen que estos tres años hayan sido tan especiales.</p>
+    <p>Espero que, sin importar adónde te lleve el futuro, siempre puedas mirar hacia atrás y recordar con una sonrisa todo lo que has vivido, las personas que conociste y los momentos que compartiste.</p>
+    <p>Gracias por formar parte de esta etapa de mi vida. Te deseo un futuro lleno de cosas bonitas y que puedas cumplir todo aquello que te propongas.</p>
+    <p class="sign">¡Feliz cumpleaños, Zankita!<br>Te quiero mucho, mi hermano. 🤍</p>
+  </article>
+
+  <div class="controls hidden" id="againArea"><button id="againBtn">✨ Volver a celebrar</button></div>
+  <div class="note">Hecho con cariño, para guardar y compartir.</div>
+  <footer>🐾 Snoopy &amp; Woodstock te desean un día precioso 🐾</footer>
+</main>
+<script>
+const openBtn=document.getElementById('openBtn');
+const letter=document.getElementById('letter');
+const againArea=document.getElementById('againArea');
+function celebrate(){
+  letter.classList.remove('hidden');
+  document.getElementById('openArea').classList.add('hidden');
+  againArea.classList.remove('hidden');
+  letter.scrollIntoView({behavior:'smooth',block:'start'});
+  const symbols=['🤍','💛','✨','♡','🎉'];
+  for(let i=0;i<34;i++){
+    const el=document.createElement('span');
+    el.className=i%3===0?'confetti':'heart';
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+'vw';
+    el.style.animationDelay=Math.random()*1.5+'s';
+    el.style.fontSize=(14+Math.random()*18)+'px';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),6000);
+  }
+}
+openBtn.addEventListener('click',celebrate);
+document.getElementById('againBtn').addEventListener('click',()=>{
+  letter.classList.add('hidden');againArea.classList.add('hidden');
+  document.getElementById('openArea').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>
